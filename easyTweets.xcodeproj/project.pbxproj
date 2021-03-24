@@ -15,6 +15,9 @@
 		E76C1176260BB4F5004D94E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76C1174260BB4F5004D94E1 /* LaunchScreen.storyboard */; };
 		E76C1181260BB4F6004D94E1 /* easyTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C1180260BB4F6004D94E1 /* easyTweetsTests.swift */; };
 		E76C118C260BB4F6004D94E1 /* easyTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C118B260BB4F6004D94E1 /* easyTweetsUITests.swift */; };
+		E76C119A260BEC5D004D94E1 /* twitter_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C1199260BEC5D004D94E1 /* twitter_image.png */; };
+		E76C119D260BEF0F004D94E1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C119C260BEF0F004D94E1 /* ResultViewController.swift */; };
+		E76C11A0260BEF41004D94E1 /* TwitterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		E76C1187260BB4F6004D94E1 /* easyTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easyTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76C118B260BB4F6004D94E1 /* easyTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyTweetsUITests.swift; sourceTree = "<group>"; };
 		E76C118D260BB4F6004D94E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E76C1199260BEC5D004D94E1 /* twitter_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter_image.png; path = ../../../Downloads/twitter_image.png; sourceTree = "<group>"; };
+		E76C119C260BEF0F004D94E1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				E76C1169260BB4F5004D94E1 /* AppDelegate.swift */,
+				E76C1199260BEC5D004D94E1 /* twitter_image.png */,
 				E76C116B260BB4F5004D94E1 /* SceneDelegate.swift */,
 				E76C116D260BB4F5004D94E1 /* ViewController.swift */,
 				E76C116F260BB4F5004D94E1 /* Main.storyboard */,
 				E76C1172260BB4F5004D94E1 /* Assets.xcassets */,
+				E76C119E260BEF1F004D94E1 /* TwitterAPI */,
+				E76C119B260BEEE0004D94E1 /* Results */,
 				E76C1174260BB4F5004D94E1 /* LaunchScreen.storyboard */,
 				E76C1177260BB4F5004D94E1 /* Info.plist */,
 			);
@@ -126,6 +135,22 @@
 				E76C118D260BB4F6004D94E1 /* Info.plist */,
 			);
 			path = easyTweetsUITests;
+			sourceTree = "<group>";
+		};
+		E76C119B260BEEE0004D94E1 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				E76C119C260BEF0F004D94E1 /* ResultViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		E76C119E260BEF1F004D94E1 /* TwitterAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */,
+			);
+			path = TwitterAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76C1176260BB4F5004D94E1 /* LaunchScreen.storyboard in Resources */,
+				E76C119A260BEC5D004D94E1 /* twitter_image.png in Resources */,
 				E76C1173260BB4F5004D94E1 /* Assets.xcassets in Resources */,
 				E76C1171260BB4F5004D94E1 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76C11A0260BEF41004D94E1 /* TwitterAPIClient.swift in Sources */,
 				E76C116E260BB4F5004D94E1 /* ViewController.swift in Sources */,
 				E76C116A260BB4F5004D94E1 /* AppDelegate.swift in Sources */,
 				E76C116C260BB4F5004D94E1 /* SceneDelegate.swift in Sources */,
+				E76C119D260BEF0F004D94E1 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
