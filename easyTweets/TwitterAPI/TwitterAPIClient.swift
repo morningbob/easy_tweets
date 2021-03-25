@@ -29,7 +29,47 @@ class TwitterAPIClient {
     }
   }
   
-  class func taskForKeywordSearchGETRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, body: RequestType, completion: @escaping (ResponseType?, Error?) -> Void) {
+  class func taskForKeywordSearchGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue("application/json", forHTTPHeaderField: "Accept")
+    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+      guard let data = data else {
+        completion(nil, error)
+        return
+      }
+      
+      let decoder = JSONDecoder()
+      
+      do {
+        let responseObject = try decoder.decode(SearchKeywordResponse.self, from: data)
+        completion(responseObject as! ResponseType, nil)
+      } catch {
+        do {
+          let errorResponse = try decoder.decode(SearchKeywordError.self, from: data)
+          completion(nil, errorResponse as! Error)
+        } catch {
+          completion(nil, error)
+        }
+      }
+    }
+    task.resume()
+  }
+  
+  class func searchKeyword(keyword: String, completion: @escaping (SearchKeywordResponse?, Error?) -> Void) {
+    
+    taskForKeywordSearchGETRequest(url: Endpoints.search(keyword).url, responseType: SearchKeywordResponse.self) { response, error in
+      
+      if let response = response {
+        completion(response, nil)
+      } else {
+        completion(nil, error)
+      }
+    }
     
   }
   

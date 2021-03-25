@@ -18,6 +18,9 @@
 		E76C119A260BEC5D004D94E1 /* twitter_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E76C1199260BEC5D004D94E1 /* twitter_image.png */; };
 		E76C119D260BEF0F004D94E1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C119C260BEF0F004D94E1 /* ResultViewController.swift */; };
 		E76C11A0260BEF41004D94E1 /* TwitterAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */; };
+		E787E4E0260D056100A04195 /* SearchKeywordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787E4DF260D056100A04195 /* SearchKeywordResponse.swift */; };
+		E787E4E3260D06E700A04195 /* SearchKeywordError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787E4E2260D06E700A04195 /* SearchKeywordError.swift */; };
+		E787E4E6260D118E00A04195 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787E4E5260D118E00A04195 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		E76C1199260BEC5D004D94E1 /* twitter_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter_image.png; path = ../../../Downloads/twitter_image.png; sourceTree = "<group>"; };
 		E76C119C260BEF0F004D94E1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIClient.swift; sourceTree = "<group>"; };
+		E787E4DF260D056100A04195 /* SearchKeywordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKeywordResponse.swift; sourceTree = "<group>"; };
+		E787E4E2260D06E700A04195 /* SearchKeywordError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKeywordError.swift; sourceTree = "<group>"; };
+		E787E4E5260D118E00A04195 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				E76C116D260BB4F5004D94E1 /* ViewController.swift */,
 				E76C116F260BB4F5004D94E1 /* Main.storyboard */,
 				E76C1172260BB4F5004D94E1 /* Assets.xcassets */,
+				E787E4E4260D117100A04195 /* Result */,
+				E787E4E1260D06D500A04195 /* Errors */,
+				E787E4DC260CF29200A04195 /* Responses */,
 				E76C119E260BEF1F004D94E1 /* TwitterAPI */,
 				E76C119B260BEEE0004D94E1 /* Results */,
 				E76C1174260BB4F5004D94E1 /* LaunchScreen.storyboard */,
@@ -151,6 +160,30 @@
 				E76C119F260BEF41004D94E1 /* TwitterAPIClient.swift */,
 			);
 			path = TwitterAPI;
+			sourceTree = "<group>";
+		};
+		E787E4DC260CF29200A04195 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E787E4DF260D056100A04195 /* SearchKeywordResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		E787E4E1260D06D500A04195 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				E787E4E2260D06E700A04195 /* SearchKeywordError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		E787E4E4260D117100A04195 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				E787E4E5260D118E00A04195 /* ResultViewController.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E787E4E3260D06E700A04195 /* SearchKeywordError.swift in Sources */,
 				E76C11A0260BEF41004D94E1 /* TwitterAPIClient.swift in Sources */,
 				E76C116E260BB4F5004D94E1 /* ViewController.swift in Sources */,
+				E787E4E6260D118E00A04195 /* ResultViewController.swift in Sources */,
 				E76C116A260BB4F5004D94E1 /* AppDelegate.swift in Sources */,
 				E76C116C260BB4F5004D94E1 /* SceneDelegate.swift in Sources */,
+				E787E4E0260D056100A04195 /* SearchKeywordResponse.swift in Sources */,
 				E76C119D260BEF0F004D94E1 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

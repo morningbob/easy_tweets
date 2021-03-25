@@ -18,6 +18,16 @@ class ViewController: UIViewController {
 
   
   @IBAction func searchButton(_ sender: UIButton) {
+    // send the request
+    TwitterAPIClient.searchKeyword(keyword: "good") { response, error in
+      if response != nil {
+        print("successfully logged in")
+        print(response?.data)
+      } else {
+        print(error?.localizedDescription ?? "")
+        
+      }
+    }
   }
 }
 
