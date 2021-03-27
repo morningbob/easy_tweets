@@ -16,6 +16,9 @@ class FollowersViewController: UIViewController, UITableViewDelegate, UITableVie
   var dataController : DataController!
   var users = [User]()
   var userId : String = ""
+  var username: String = ""
+  var name: String = ""
+  var fetchedUser : User!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,22 +30,34 @@ class FollowersViewController: UIViewController, UITableViewDelegate, UITableVie
   
   @IBAction func saveFollowersAction(_ sender: UIBarButtonItem) {
     // create user objects
+    //fetchUser(userId: self.userId)
     createUsers()
     saveContext()
   }
   
   func createUsers() {
     //let user = fetchUser(userId: self.userId)
-    fetchUser(userId: self.userId)
+    
+    let originalUser = User(context: dataController.viewContext)
+    originalUser.id = self.userId
+    originalUser.username = self.username
+    originalUser.name = self.name
+
     users = followers.map { follower in
       let user = User(context: dataController.viewContext)
       user.id = follower.id
       user.username = follower.username
       user.name = follower.name
-      user.followee = user
+      //user.followee = originalUser
       return user
     }
     
+    users.append(originalUser)
+    
+    //if fetchUser(userId: self.userId) == nil {
+
+    //}
+ 
   }
   
   func saveContext() {
@@ -53,17 +68,20 @@ class FollowersViewController: UIViewController, UITableViewDelegate, UITableVie
       self.presentAlert(title: "Followers", message: "There is error when saving followers.")
     }
   }
-  
-  func fetchUser(userId: String) {  //-> User
+  /*
+  func fetchUser(userId: String)  {  //-> User
     // build the request
     let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
     let predicate = NSPredicate(format: "id == %@", self.userId)
     fetchRequest.predicate = predicate
-    let users = try? dataController.viewContext.execute(fetchRequest)
+    let users = try? dataController.viewContext.execute(fetchRequest) as! [User]
     print("executed")
     print(users)
-    //return users
+    if users?.count != 0 {
+      self.fetchedUser = users![0]
+    }
   }
+ */
   
   func presentAlert(title: String, message: String) {
     let alert = UIAlertController(
