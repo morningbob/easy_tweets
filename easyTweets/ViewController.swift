@@ -13,10 +13,10 @@ class ViewController: UIViewController {
   @IBOutlet weak var usernameTextField: UITextField!
   @IBOutlet weak var followersTextField: UITextField!
   
-  var tweets = [Tweet]()
+  var tweets = [TweetResponse]()
   var userId : String = ""
-  var followers = [User]()
-  
+  var followers = [UserEntity]()
+  var dataController : DataController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,11 +30,12 @@ class ViewController: UIViewController {
       if response != nil {
         print("successfully got tweets with the keyword.")
         print(response?.data)
-        self.tweets = response?.data ?? [Tweet]()
+        self.tweets = response?.data ?? [TweetResponse]()
         // navigate to display result
         DispatchQueue.main.async {
           let resultVC = self.storyboard!.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
           resultVC.tweets = self.tweets
+          resultVC.dataController = self.dataController
           self.navigationController!.pushViewController(resultVC, animated: true)
         }
       } else {
@@ -84,6 +85,8 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
           let followersVC = self.storyboard!.instantiateViewController(identifier: "FollowersViewController") as! FollowersViewController
           followersVC.followers = self.followers
+          followersVC.userId = self.userId
+          followersVC.dataController = self.dataController
           self.navigationController!.pushViewController(followersVC, animated: true)
         }
       } else {
@@ -98,10 +101,11 @@ class ViewController: UIViewController {
       if response != nil {
         print("successfully got user's tweets")
         print(response?.data)
-        self.tweets = response?.data ?? [Tweet]()
+        self.tweets = response?.data ?? [TweetResponse]()
         DispatchQueue.main.async {
           let resultVC = self.storyboard!.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
           resultVC.tweets = self.tweets
+          resultVC.dataController = self.dataController
           self.navigationController!.pushViewController(resultVC, animated: true)
         }
       } else {

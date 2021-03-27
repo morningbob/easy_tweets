@@ -8,7 +8,7 @@
 import Foundation
 
 struct SearchUserTweetsResponse : Codable {
-  let data: [Tweet]
+  let data: [TweetResponse]
   let meta: Meta
   
 }

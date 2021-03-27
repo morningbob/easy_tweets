@@ -173,7 +173,13 @@
                             <constraint firstItem="3lv-n0-GrB" firstAttribute="top" secondItem="chM-jH-lPr" secondAttribute="top" id="gtY-t6-2Qn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tweets" id="Dfh-jp-oxJ"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="Dfh-jp-oxJ">
+                        <barButtonItem key="rightBarButtonItem" title="Save Tweets" id="BIh-zs-UhP">
+                            <connections>
+                                <action selector="saveTweetsAction:" destination="Rz7-oY-QeU" id="W46-HA-k0x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3lv-n0-GrB" id="TA4-87-feT"/>
                     </connections>
@@ -252,7 +258,13 @@
                             <constraint firstItem="Pmc-KT-2IR" firstAttribute="leading" secondItem="IME-fc-JRI" secondAttribute="leading" id="rm6-aT-WAG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Followers" id="NoM-IH-EuR"/>
+                    <navigationItem key="navigationItem" title="Followers" id="NoM-IH-EuR">
+                        <barButtonItem key="rightBarButtonItem" title="Save Followers" id="ez0-DR-jDQ">
+                            <connections>
+                                <action selector="saveFollowersAction:" destination="2WK-Hg-Bxd" id="lof-48-sXf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Pmc-KT-2IR" id="tYs-e0-g7a"/>
                     </connections>

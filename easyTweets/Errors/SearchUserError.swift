@@ -8,12 +8,12 @@
 import Foundation
 
 struct SearchUserError : Codable {
-  let errors: ErrorDetail
+  let errors: [ErrorDetail]
 }
 
 extension SearchUserError: LocalizedError {
   var errorDescription: String? {
-    return errors.detail
+    return "User not found."
   }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 struct SearchUserFollowersResponse : Codable {
-  let data: [User]
+  let data: [UserEntity]
   let meta: FollowersMeta
 }
 

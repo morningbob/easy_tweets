@@ -9,11 +9,11 @@ import Foundation
 
 struct SearchKeywordResponse : Codable {
   
-  let data : [Tweet]
+  let data : [TweetResponse]
   let meta : Meta
 }
 
-struct Tweet : Codable {
+struct TweetResponse : Codable {
   
   let id : String
   let text : String

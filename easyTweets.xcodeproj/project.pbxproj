@@ -27,6 +27,8 @@
 		E78A393C260E4DA6007F62B3 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A393B260E4DA6007F62B3 /* FollowersViewController.swift */; };
 		E78A393E260E4E14007F62B3 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A393D260E4E14007F62B3 /* FollowerCell.swift */; };
 		E78A3940260E5016007F62B3 /* SearchUserFollowersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A393F260E5016007F62B3 /* SearchUserFollowersResponse.swift */; };
+		E78A3944260E6CF5007F62B3 /* Tweets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E78A3942260E6CF5007F62B3 /* Tweets.xcdatamodeld */; };
+		E78A3946260E798E007F62B3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A3945260E798E007F62B3 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		E78A393B260E4DA6007F62B3 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		E78A393D260E4E14007F62B3 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		E78A393F260E5016007F62B3 /* SearchUserFollowersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserFollowersResponse.swift; sourceTree = "<group>"; };
+		E78A3943260E6CF5007F62B3 /* Tweets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tweets.xcdatamodel; sourceTree = "<group>"; };
+		E78A3945260E798E007F62B3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				E76C116D260BB4F5004D94E1 /* ViewController.swift */,
 				E76C116F260BB4F5004D94E1 /* Main.storyboard */,
 				E76C1172260BB4F5004D94E1 /* Assets.xcassets */,
+				E78A3941260E6CD4007F62B3 /* Model */,
 				E787E4E1260D06D500A04195 /* Errors */,
 				E787E4DC260CF29200A04195 /* Responses */,
 				E76C119E260BEF1F004D94E1 /* TwitterAPI */,
@@ -202,6 +207,15 @@
 				E78A393D260E4E14007F62B3 /* FollowerCell.swift */,
 			);
 			path = Followers;
+			sourceTree = "<group>";
+		};
+		E78A3941260E6CD4007F62B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E78A3942260E6CF5007F62B3 /* Tweets.xcdatamodeld */,
+				E78A3945260E798E007F62B3 /* DataController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +351,7 @@
 			files = (
 				E78A393C260E4DA6007F62B3 /* FollowersViewController.swift in Sources */,
 				E787E4E3260D06E700A04195 /* SearchKeywordError.swift in Sources */,
+				E78A3944260E6CF5007F62B3 /* Tweets.xcdatamodeld in Sources */,
 				E76C11A0260BEF41004D94E1 /* TwitterAPIClient.swift in Sources */,
 				E76C116E260BB4F5004D94E1 /* ViewController.swift in Sources */,
 				E787E4EC260D3C7600A04195 /* SearchUserError.swift in Sources */,
@@ -347,6 +362,7 @@
 				E787E4E0260D056100A04195 /* SearchKeywordResponse.swift in Sources */,
 				E78A393A260E428D007F62B3 /* SearchUserTweetsResponse.swift in Sources */,
 				E76C119D260BEF0F004D94E1 /* ResultViewController.swift in Sources */,
+				E78A3946260E798E007F62B3 /* DataController.swift in Sources */,
 				E78A393E260E4E14007F62B3 /* FollowerCell.swift in Sources */,
 				E78A3940260E5016007F62B3 /* SearchUserFollowersResponse.swift in Sources */,
 			);
@@ -681,6 +697,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E78A3942260E6CF5007F62B3 /* Tweets.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E78A3943260E6CF5007F62B3 /* Tweets.xcdatamodel */,
+			);
+			currentVersion = E78A3943260E6CF5007F62B3 /* Tweets.xcdatamodel */;
+			path = Tweets.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E76C115E260BB4F5004D94E1 /* Project object */;
 }

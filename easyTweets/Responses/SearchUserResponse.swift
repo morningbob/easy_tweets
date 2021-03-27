@@ -8,11 +8,11 @@
 import Foundation
 
 struct SearchUserResponse : Codable {
-  let data: User
+  let data: UserEntity
   //let meta: Meta
 }
 
-struct User : Codable {
+struct UserEntity : Codable {
   let id : String
   let name : String
   let username : String
